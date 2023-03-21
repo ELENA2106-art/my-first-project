@@ -10,20 +10,23 @@ public class Task_Array {
         System.out.println(line + "\n" + "\t" + "N" + (count++));
     }
 
-
     public static void main(String[] args) {
         task();
 
         String[] europeanCountries = {"France", "Germany", "Latvia", "Estonia", "Poland", "Austria", "Belgium", "Italy",
                 "Finland", "Spain"};
+        for (int i = 0; i < europeanCountries.length; i++) {
+            System.out.println(europeanCountries[i]);
+        }
+
         System.out.println(Arrays.toString(europeanCountries));
 
         for (int i = 0; i < europeanCountries.length; i++)
-            if(europeanCountries[2] == "Latvia"){
-            System.out.println("Latvia is my motherland.");
-        }else{
-            System.out.println(europeanCountries);
-        }
+            if (europeanCountries[i].equals("Latvia")) {
+                System.out.println("Latvia is my motherland.");
+            } else {
+                System.out.println(europeanCountries[i]);
+            }
         System.out.println(Arrays.toString(europeanCountries));
 
 
@@ -41,33 +44,30 @@ public class Task_Array {
 
         task();
 
-        int salary = 5000;
-        int salary2 = 10000;
+        int salary = 10000;
 
 
-        if (salary <= 5000) {
+        if (salary < 5000) {
             System.out.println("Your salary is low.");
         }
-        if ((salary == salary) || (salary <= salary2)) {
+        if (salary >= 5000 && salary < 10000) {
             System.out.println("Your salary is average.");
-        } else if (salary > salary2) {
+        } else {
             System.out.println("Your salary is high.");
+
+            task();
+
+            int a = 5;
+
+            if (a > 0) {
+                System.out.println("The number is positive.");
+            }
+            if (a < 0) {
+                System.out.println("The number is negative.");
+            } else if (a == 0) {
+                System.out.println("The number is zero.");
+            }
+
         }
-
-
-        task();
-
-        int a = 5;
-
-        if (a > 0) {
-            System.out.println("The number is positive.");
-        }
-        if (a < 0) {
-            System.out.println("The number is negative.");
-        } else if (a == 0) {
-            System.out.println("The number is zero.");
-        }
-
-
     }
 }
